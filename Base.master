@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Base.master.cs" Inherits="Base" %>
+
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtmll-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+  <title>Las cartitas</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <script src="js/bootstrap.bundle.js"></script>
+
+  <style>
+
+      body {
+          background: url('http://localhost:55790/image/reloco.jpg') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+
+      .row.content {height:auto;} 
+    
+  </style>
+</head>
+<body>
+<form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+<header>
+<nav class="navbar  navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Las cartitas</a>
+        <asp:Button ID="Button1" runat="server" Text="Matar Variables Session" OnClick="kill" />
+    </div>
+    <ul class="nav navbar-nav">
+ 
+    </ul>
+  </div>
+</nav>
+</header>
+  
+<article   class="container-fluid">    
+  
+  <div class="row content">
+ 
+    <div class="text-center bg-overlay"> 
+         <div>
+        <p>Juego simple de memoria</p>
+        <p>Selecciona entre pica,corazon,diamante,trebol</p>
+        <p>Al final de las 5 rondas ingresa la carta y posicion de esta la cual elegiste  en cada ronda
+            RECUERDA LA POSICION Y EL NOMBRE DE LA CARTA, los cuales pueden ser pica/diamante/trevol/corazon
+        </p>
+
+    </div>
+  
+     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+
+         <ContentTemplate>
+    <asp:ContentPlaceHolder ID="content1" runat="server"> 
+       
+       
+    </asp:ContentPlaceHolder>
+             </ContentTemplate>
+              </asp:UpdatePanel>
+    </div>
+  
+  </div>
+</article>
+    <article   class="container-fluid  col-sm-4">    
+  
+  <div class="row content">
+ 
+    <div class="text-center bg-overlay"> 
+         <div>
+        <p>Puntaje de jugador</p>
+        <p></p>
+        <p></p>
+
+    </div>
+  
+     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+
+         <ContentTemplate>
+    <asp:ContentPlaceHolder ID="Content2" runat="server"> 
+       
+       
+    </asp:ContentPlaceHolder>
+             </ContentTemplate>
+              </asp:UpdatePanel>
+    </div>
+  
+  </div>
+</article>
+
+  
+    </form>
+</body>
+
+</html>
